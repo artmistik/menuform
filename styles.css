@@ -2,78 +2,81 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-     
 }
- 
+
 .modal-overlay *:before,
 .modal-overlay *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
- 
+
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, 0.6);
     overflow: auto;
     z-index: 999;
-    transition: .4s all;
+    transition: 0.4s all;
     opacity: 0;
     visibility: hidden;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
- 
+
 .modal-overlay_visible {
     opacity: 1;
     visibility: visible;
 }
- 
+
 .modal-table {
     display: table;
     width: 100%;
     height: 100%;
 }
- 
+
 .modal-table-cell {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     padding: 0 15px;
 }
- 
+
 .modal {
-    transition: .4s all;
+    transition: 0.4s all;
     display: inline-block;
     padding: 18px 44px 20px 30px;
     max-width: 400px;
     width: 100%;
-    background: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, .25);
-    color: #333;
+    background: rgba(51, 51, 51, 0.9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    color: #fff;
     text-align: left;
     font-family: Arial;
     margin: 30px 0;
-    transform: translate(0, 20%);
+    transform: translate(0, 0);
     position: relative;
-    border-radius: 4px 6px 4px 4px;
+    border-radius: 8px;
     cursor: auto;
     font-size: 16px;
 }
- 
+
 .modal-overlay_visible .modal {
     transform: translate(0);
 }
- 
+
 .modal__header {
     font-size: 22px;
     font-weight: 400;
     padding: 0 0 30px 0;
+    color: #fff;
 }
- 
+
 .modal__close {
     position: absolute;
     right: 10px;
@@ -82,14 +85,14 @@
     width: 25px;
     height: 25px;
     border-radius: 0 0 4px 4px;
-    transition: .4s all;
+    transition: 0.4s all;
 }
- 
+
 .modal__close:hover {
     background: #ed5f55;
     cursor: pointer;
 }
- 
+
 .modal__close:before,
 .modal__close:after {
     content: "";
@@ -105,53 +108,68 @@
     top: 0;
     bottom: 0;
 }
- 
+
 .modal__close:after {
     transform: rotate(-45deg);
 }
- 
+
 .modal__content label {
-    font-size:13px;
-    color:#777;
-    margin:0;
+    font-size: 13px;
+    color: #777;
+    margin: 0;
 }
- 
+
 .item {
     position: relative;
 }
- 
+
 .item label.error {
     font-size: 12px;
     position: absolute;
     right: 8px;
     bottom: 0px;
     color: #fff;
-    background-color: rgba(220,93,107,0.6);
+    background-color: rgba(220, 93, 107, 0.6);
     border-radius: 2px;
     padding: 0px 6px;
     line-height: 17px;
 }
+
 .modal-link {
     text-align: center;
     display: block;
     font-size: 16px;
-    background: #00bff3;
-    border-radius: 2px;
-    padding: 4px 9px;
+    background: rgba(0, 191, 243, 0.8);
+    border-radius: 8px;
+    padding: 12px 20px;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
     margin: 0 auto;
+    transition: 0.4s background;
 }
- 
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], textarea, select, .form-control {
+
+.modal-link:hover {
+    background: rgba(0, 191, 243, 1);
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+textarea,
+select,
+.form-control {
     border: none;
     height: 40px;
     border: 1px solid #e6e4e4;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 0;
-    color: #000;
+    color: #fff;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 8px;
@@ -160,8 +178,9 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
     display: block;
     width: 100%;
 }
- 
-.theme_buttons a, .theme_button {
+
+.theme_buttons a,
+.theme_button {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -176,15 +195,15 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
     background-color: #00bff3;
     border-radius: 0px;
     position: relative;
-    -webkit-transition: all 0.4s linear 0s;
     transition: all 0.4s linear 0s;
 }
- 
+
 label {
     display: inline-block;
     max-width: 100%;
 }
- 
-.red, .required {
+
+.red,
+.required {
     color: #fa5c5d;
 }

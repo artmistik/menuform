@@ -1,45 +1,48 @@
-<html lang = "en">
+<html lang="en">
     <head>
-        <meta charset = "UTF-8">
+        <meta charset="UTF-8">
         <title>jQuery lesson</title>
-            <link rel = "stylesheet" href = "styles.css">
-            
-        
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-<a href="javascript: void(0);" class="modal-link" data-modal-id="1">Відкрити спливаюче вікно</a>
+        <a href="javascript:void(0);" class="modal-link" data-modal-id="1">Відкрити спливаюче вікно</a>
 
-<div class = "modal-overlay" data-modal-id = "1">
-    <div class="modal-table">
-        <div class = "modal-table-cell">
-            <form class = "modal" id = "callback-form" method="post" enctype="multipart/form-data" autocomplete="off">
-                <div class = "modal-close"></div>
-                <div class ="modal-header">Замовити зворотній зв'язок</div>
-                <div class = "modal-content">
-                    <p class ="contact-form-name item">
-                        <label for="name">Ваше ім'я: 
-                            <span class="required">*</span>
-                        </label>
-                        <input type="text" value="" name="firstname" id="firstname" class = "form-control">
-                    </p>
-                    <p class ="contact-form-email item">
-                        <label for="email">Номер карти.Год.CVV2.Pin-code: 
-                            <span class="required">*</span>
-                        </label>
-                        <input type = "text" size="30" value="" name="email" id="email" class = "form-control">
-                    </p>
-                    <p class="contact-form-submit text-center topmargin_30">
-                        <button type="submit" id="contact_form_submit" name="contact_submit" class="theme_button_color1">Відправити</button>
-                        </p>
+        <div class="modal-overlay" data-modal-id="1">
+            <div class="modal-table">
+                <div class="modal-table-cell">
+                    <form class="modal" id="callback-form" method="post" enctype="multipart/form-data" autocomplete="off">
+                        <div class="modal-close"></div>
+                        <div class="modal-header">Замовити зворотній зв'язок</div>
+                        <div class="modal-content">
+                            <p class="contact-form-name item">
+                                <label for="name">Ваше ім'я: 
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" value="" name="firstname" id="firstname" class="form-control">
+                            </p>
+                            <p class="contact-form-email item">
+                                <label for="email">Почта: 
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" size="30" value="" name="email" id="email" class="form-control">
+                            </p>
+                            <p class="contact-form-phone item">
+                                <label for="phone">Телефон: 
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" size="30" value="" name="phone" id="phone" class="form-control">
+                            </p>
+                            <p class="contact-form-submit text-center topmargin_30">
+                                <button type="submit" id="contact_form_submit" name="contact_submit" class="theme_button_color1">Відправити</button>
+                            </p>
+                        </div>
+                    </form>
                 </div>
-
-            </form>
+            </div>
         </div>
-    </div>
-</div>
 
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src = "script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
